@@ -1,10 +1,14 @@
-import { HomePage } from './pages/HomePage'
+import  { Routes, Route } from 'react-router';
+import { HomePage } from './pages/HomePage';
 import './App.css'
 
 function App() {
 
   return (
-    <HomePage />
+    <Routes>
+      <Route patg="/" element={<HomePage />} />
+      <Route patg="checkout" element={<div>Test checkout page</div>} />
+    </Routes>
   )
 }
 
