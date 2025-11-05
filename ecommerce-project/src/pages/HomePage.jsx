@@ -14,8 +14,6 @@ export function HomePage({ cart }) {
             });
     }, []);
 
-
-
     return (
         <>
             <title>Ecommerce Project</title>
@@ -30,7 +28,7 @@ export function HomePage({ cart }) {
                             <div key={product.id} className="product-container">
                                 <div className="product-image-container">
                                     <img className="product-image"
-                                        src={product.imgage} />
+                                        src={product.image} />
                                 </div>
 
                                 <div className="product-name limit-text-to-2-lines">
@@ -39,14 +37,16 @@ export function HomePage({ cart }) {
 
                                 <div className="product-rating-container">
                                     <img className="product-rating-stars"
-                                        src={`images/ratings/rating-${product.rating.stars * 10}.png`} />
+                                        src={`images/ratings/rating-${product.rating.stars * 10}.
+                                        png`} alt="Rating: 4.5 stars"
+                                    />
                                     <div className="product-rating-count link-primary">
                                         {product.rating.count}
                                     </div>
                                 </div>
 
                                 <div className="product-price">
-                                    {formatMoney(product.priceCents)}
+                                    ${formatMoney(product.priceCents)}
                                 </div>
 
                                 <div className="product-quantity-container">
@@ -67,7 +67,7 @@ export function HomePage({ cart }) {
                                 <div className="product-spacer"></div>
 
                                 <div className="added-to-cart">
-                                    <img src="images/icons/checkmark.png" />
+                                    <img src="/images/icons/checkmark.png" />
                                     Added
                                 </div>
 
